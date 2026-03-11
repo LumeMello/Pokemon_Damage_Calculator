@@ -7,10 +7,15 @@ public class Calculate {
 		mk1.name = Pokemons.CHARIZARD;
 		mk1.name.PokemonData(mk1);
 		
+		
 		Monster mk2 = new Monster();
 		mk2.name = Pokemons.VENUSAUR;
 		mk2.name.PokemonData(mk2);
 		mk2.move = Moves.ABSORB;
+
+		int minDamage = 0;
+		int maxDamage = 0;
+		int critDamage = 0;
 		
 		System.out.println(mk2.name);
 		System.out.println(mk2.Health);
@@ -29,9 +34,14 @@ public class Calculate {
 		
 		mk2.move.MoveData(mk2);
 		System.out.println(mk2.move.power);
+
+		DamageCalculator(mk2,mk1);
+		System.out.println(minDamage);
+		System.out.println(maxDamage);
+		System.out.println(critDamage);
 	}
 	
-	private int DamageCalculator(Monster attacker, Monster defender) {
+	private void DamageCalculator(Monster attacker, Monster defender) {
 		double fdamage;
 		if(attacker.move.category == Category.PHYSICAL) {
 			fdamage = (((2*attacker.level+10)/250) * ((attacker.move.power*attacker.Attack)/defender.Defence) +2);
@@ -44,10 +54,29 @@ public class Calculate {
 		if(attacker.move.type == attacker.type1 || attacker.move.type == attacker.type2) {
 			fdamage = fdamage * 1.5;
 		}
+
+		if(defender.(attacker.move.type.toLowerCase()) != 0){
+			if(defender.(attacker.move.type.toLowerCase()) == -2){
+				fdamage = fdamage * 4;
+			}else if(defender.(attacker.move.type.toLowerCase()) == -1){
+				fdamage = fdamage * 2;
+			}else if(defender.(attacker.move.type.toLowerCase()) == 1){
+				fdamage = fdamage * 0.5;
+			}else if(defender.(attacker.move.type.toLowerCase()) == 2){
+				fdamage = fdamage * 0.25;
+			}else{
+				fdamage = 0;
+			}
+		}
 		
+		double fminDamage = fdamage * 0.85; 
+		double fmaxDamage = fdamage; 
+		double fcritDamage = fdamage * 1.5;
 		
+		minDamage = (int) fminDamage;
+		maxDamage = (int) fmaxDamage;
+		critDamage = (int) fcritDamage;
 		
-		int damage = (int) fdamage;
-		return damage;
 	}
 }
+
