@@ -23,18 +23,20 @@ Extract the files into your local directory. Open your terminal—the glow of th
 ```bash
 git clone [https://github.com/LumeMello/Pokemon_Damage_Calculator.git](https://github.com/LumeMello/Pokemon_Damage_Calculator.git)
 cd Pokemon_Damage_Calculator
-2. Compile the source code:
+```
+**2. Compile the source code:
 Target the Pokemon package directory to link all dependencies.
 
-Bash
+```bash
 javac Pokemon/*.java
-＞_ ＵＳＡＧＥ // ＰＬＡＮＮＩＮＧ_ＴＨＥ_ＳＴＲＩＫＥ
+```
+###＞_ ＵＳＡＧＥ // ＰＬＡＮＮＩＮＧ_ＴＨＥ_ＳＴＲＩＫＥ
 This isn't a point-and-click toy; it's a developer's tool. To simulate a battle, you must edit your contract briefing directly in the Calculate.java file.
 
-1. Open Calculate.java
+**1. Open Calculate.java
 This is your staging area. Configure your Attacker (mk2 in the default script) and your Defender (mk1).
 
-2. Assign Variables
+**2. Assign Variables
 Equip your operatives with the necessary data. You can set their Base Pokemon, Level, Nature, and the specific Move you plan to execute.
 
 Java
@@ -50,13 +52,16 @@ operative.nature = Nature.Modest;
 operative.name.PokemonData(operative);
 operative.move = Moves.ROCK_TOMB; // Select your weapon
 operative.level = 50;
-3. Execute the Simulation
+**3. Execute the Simulation
 Once your parameters are set, save the file, recompile, and run the main class to see the projected damage output (Minimum, Maximum, and Critical strike values).
 
-Bash
+```bash
 # Recompile after making changes
 javac Pokemon/Calculate.java
 
 # Execute the protocol
 java Pokemon.Calculate
+```
 The terminal will spit out the raw damage calculations based on precise API stats, Type advantages, STAB, and modifiers. Assess the numbers. Execute your move.
+
+Leave no survivors.
