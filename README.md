@@ -45,13 +45,14 @@ Monster target = new Monster();
 target.name = Pokemons.CHARIZARD;
 target.name.PokemonData(target); // Fetches live API data
 target.level = 50;
-
+```
 Monster operative = new Monster();
 operative.name = Pokemons.VENUSAUR;
 operative.nature = Nature.Modest;
 operative.name.PokemonData(operative);
 operative.move = Moves.ROCK_TOMB; // Select your weapon
 operative.level = 50;
+```
 **3. Execute the Simulation
 Once your parameters are set, save the file, recompile, and run the main class to see the projected damage output (Minimum, Maximum, and Critical strike values).
 
