@@ -1422,7 +1422,9 @@ public enum Pokemons {
                 monster.SpecialAttack = (int) (Math.floor(((2 * monster.SpecialAttack + monster.IV_SpecialAttack + (monster.EV_SpecialAttack/4))*monster.level)/100) + 5) ;
                 monster.SpecialDefence = (int) (Math.floor(((2 * monster.SpecialDefence + monster.IV_SpecialDefence + (monster.EV_SpecialDefence/4))*monster.level)/100) + 5) ;
                 monster.Speed = (int) (Math.floor(((2 * monster.Speed + monster.IV_Speed + (monster.EV_Speed/4))*monster.level)/100) + 5) ;
-
+                
+                monster.nature.NatureData(monster);
+                
                 if (stype2 != null) {
                     monster.type2 = Type.valueOf(stype2.toUpperCase());
                 } else {

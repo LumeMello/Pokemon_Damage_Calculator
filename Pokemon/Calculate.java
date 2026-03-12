@@ -11,6 +11,7 @@ public class Calculate {
 		
 		Monster mk2 = new Monster();
 		mk2.name = Pokemons.VENUSAUR;
+		mk2.nature = Nature.Modest;
 		mk2.name.PokemonData(mk2);
 		mk2.move = Moves.ROCK_TOMB;
 		mk2.level = 50;
