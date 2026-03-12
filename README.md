@@ -21,7 +21,7 @@ Extract the files into your local directory. Open your terminal—the glow of th
 
 **1. Clone the repository (or download the source):**
 ```bash
-git clone [https://github.com/LumeMello/Pokemon_Damage_Calculator.git](https://github.com/LumeMello/Pokemon_Damage_Calculator.git)
+git clone https://github.com/LumeMello/Pokemon_Damage_Calculator.git
 cd Pokemon_Damage_Calculator
 ```
 **2. Compile the source code:
