@@ -18,5 +18,10 @@ public enum Type {
 	PSYCHIC,
 	ROCK,
 	STEEL,
-	WATER
+	WATER;
+	
+	@Override
+    public String toString() {
+        return name().toLowerCase();
+    }
 }

@@ -26,12 +26,12 @@ public class Monster {
 	int EV_SpecialDefence = 0;
 	int EV_Speed = 0;
 	
-	int IV_Health = 0;
-	int IV_Attack = 0;
-	int IV_Defence = 0;
-	int IV_SpecialAttack = 0;
-	int IV_SpecialDefence = 0;
-	int IV_Speed = 0;
+	int IV_Health = 31;
+	int IV_Attack = 31;
+	int IV_Defence = 31;
+	int IV_SpecialAttack = 31;
+	int IV_SpecialDefence = 31;
+	int IV_Speed = 31;
 	
 	Nature nature = Nature.Bashful;
 	
@@ -58,4 +58,28 @@ public class Monster {
 	int steel = 0;
 	int water = 0;
 	
+	
+	public int getTypeRelations(String type) {
+	    switch (type) {
+	        case "bug": return this.bug;
+	        case "dark": return this.dark;
+	        case "dragon": return this.dragon;
+	        case "eletric": return this.eletric;
+	        case "fairy": return this.fairy;
+	        case "fighting": return this.fighting;
+	        case "fire": return this.fire;
+	        case "flying": return this.flying;
+	        case "ghost": return this.ghost;
+	        case "grass": return this.grass;
+	        case "ground": return this.ground;
+	        case "ice": return this.ice;
+	        case "normal": return this.normal;
+	        case "poison": return this.poison;
+	        case "psychic": return this.psychic;
+	        case "rock": return this.rock;
+	        case "steel": return this.steel;
+	        case "water": return this.water;
+	        default: return 0;
+	    }
+	}
 }

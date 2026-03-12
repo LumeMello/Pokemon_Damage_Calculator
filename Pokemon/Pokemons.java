@@ -6,6 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.lang.Math;
 
 public enum Pokemons {
 	BULBASAUR("bulbasaur"),
@@ -1411,10 +1412,16 @@ public enum Pokemons {
                 if (spAttack != null) monster.SpecialAttack = Integer.parseInt(spAttack);
                 if (spDefence != null) monster.SpecialDefence = Integer.parseInt(spDefence);
                 if (speed != null) monster.Speed = Integer.parseInt(speed);
-                
                 if (stype1 != null) {
                     monster.type1 = Type.valueOf(stype1.toUpperCase()); 
                 }
+                
+                monster.Health = (int) (Math.floor(((2 * monster.Speed + monster.IV_Speed + (monster.EV_Speed/4))*monster.level)/100) + monster.level + 10);
+                monster.Attack = (int) (Math.floor(((2 * monster.Attack + monster.IV_Attack + (monster.EV_Attack/4))*monster.level)/100) + 5) ;
+                monster.Defence = (int) (Math.floor(((2 * monster.Defence + monster.IV_Defence + (monster.EV_Defence/4))*monster.level)/100) + 5) ;
+                monster.SpecialAttack = (int) (Math.floor(((2 * monster.SpecialAttack + monster.IV_SpecialAttack + (monster.EV_SpecialAttack/4))*monster.level)/100) + 5) ;
+                monster.SpecialDefence = (int) (Math.floor(((2 * monster.SpecialDefence + monster.IV_SpecialDefence + (monster.EV_SpecialDefence/4))*monster.level)/100) + 5) ;
+                monster.Speed = (int) (Math.floor(((2 * monster.Speed + monster.IV_Speed + (monster.EV_Speed/4))*monster.level)/100) + 5) ;
 
                 if (stype2 != null) {
                     monster.type2 = Type.valueOf(stype2.toUpperCase());
