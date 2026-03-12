@@ -50,7 +50,7 @@ Monster operative = new Monster();
 operative.name = Pokemons.VENUSAUR;
 operative.nature = Nature.Modest;
 operative.name.PokemonData(operative);
-operative.move = Moves.ROCK_TOMB; // Select your weapon
+operative.move = Moves.ROCK_TOMB; // Select your move
 operative.level = 50;
 ```
 **3. Execute the Simulation
